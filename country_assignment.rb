@@ -8,7 +8,7 @@ module CountryModule
        end
     end
 
-    def chance_in_UNS_council()
+    def will_get_chance_in_UNS_council()
         if(@is_developed)
             puts "Country #{@name} will get a chance in UNS council."
         else
@@ -17,7 +17,7 @@ module CountryModule
         
     end
 
-    def win_war()
+    def is_country_win_a_war()
         if(@army_strength > 10000)
             puts "Country #{@name} can win a war."
         else
@@ -67,7 +67,7 @@ end
 #binding.irb
 
 countries.each do |c|
-    c.check_loan
-    c.chance_in_UNS_council
-    c.win_war
+    c.is_eligible_for_loan
+    c.will_get_chance_in_UNS_council
+    c.is_country_win_a_war
 end
