@@ -2,15 +2,19 @@ puts "Enter number:"
 
 n = gets.chomp.to_i
 
+flag = true
 if (n < 2)
-    puts "No. is not prime"
+    flag = false
 else
-    (2..n-1).each do |ele|
+    (2...n).each do |ele|
         if(n % ele) == 0
-            puts "No. is not prime"
-        else
-            puts "No. is prime"
+            flag = false
         end
     end
-    
+end
+
+if flag == true
+    puts "No. is prime"
+else
+    puts "No. is not prime"
 end
