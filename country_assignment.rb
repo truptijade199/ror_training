@@ -1,6 +1,6 @@
 
 module CountryModule
-    def check_loan()
+    def is_eligible_for_loan()
        if(@population > 100000 && @gdp < 5)
         puts "Country #{@name} will get a loan."
        else
