@@ -23,7 +23,12 @@
                     <%= post.post_title %>
                 </td>
                 <td>
-                    <%= post.is_published %>
+                    <% if post.is_published == true %>
+                    <span>Yes</span>
+                    <% end %>
+                    <% if post.is_published == false %>
+                    <span>No</span>
+                    <% end %>
                 </td>
                 <td>
                     <%= link_to 'View', post_path(post) %>

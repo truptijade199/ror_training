@@ -17,9 +17,12 @@
 
     <div>
         <label>Published</label>
-        <% if @post.is_published 
-            print "1" 
-            end %>
+        <% if @post.is_published == true %>
+        <span>Yes</span>
+        <% end %>
+        <% if @post.is_published == false %>
+        <span>No</span>
+        <% end %>
     </div>
 
     <div>
