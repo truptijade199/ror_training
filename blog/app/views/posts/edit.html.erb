@@ -1,0 +1,33 @@
+<div class="container">
+    <h3>Edit Blog</h3>
+    <%= form_for @post, url:{action: :update} do |frm| %>
+        <div>
+            <div>
+                <label>Post title</label>
+                <%= frm.text_field :post_title, :required => true  %>                
+            </div>
+            <div>
+                <label>Post date</label>
+                <%= frm.date_field :post_date, :required => true  %>                
+            </div>
+            <div>
+                <label>Post description</label>
+                <%= frm.text_field :post_description, :required => true  %>                
+            </div>
+            <div>
+                <label>Post slug</label>
+                <%= frm.text_field :slug, :required => true  %>                
+            </div>
+            <div>
+                <label>Post is published</label>
+                <%= frm.text_field :is_published, :required => true  %>                
+            </div>
+            <%# <%= frm.text_field :user_id%> 
+        </div>
+        <%= frm.submit 'Submit' %>
+    <% end %>
+
+    <div>
+        <%= link_to 'Back', {controller: 'posts', action: 'index'} %>
+    </div>
+</div>
